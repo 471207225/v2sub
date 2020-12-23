@@ -182,7 +182,7 @@ if mode == 'changeNode':
         if inputStr == 'y':
 
             jsonObj = serverListLink[setServerNodeId].formatConfig()
-            jsonObj = askfollowRedirect(jsonObj)
+            #jsonObj = askfollowRedirect(jsonObj)
             json.dump(jsonObj, open(v2rayConfigLocal, 'w'), indent=2)
             print("\n重启 v2ray 服务……\n")
             subprocess.call('systemctl restart v2ray.service', shell=True)
