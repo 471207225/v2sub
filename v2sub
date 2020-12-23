@@ -95,7 +95,7 @@ def closeiptableRedirect():
 
 
 mode = 'changeNode'
-v2rayConfigLocal=' /usr/local/etc/v2ray/config.json'
+v2rayConfigLocal='/usr/local/etc/v2ray/config.json'
 testFileUrl="http://cachefly.cachefly.net/10mb.test"
 if len(sys.argv) == 2:
     mode = sys.argv[1]
