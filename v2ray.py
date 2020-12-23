@@ -34,7 +34,7 @@ class V2ray(Node):
             {
                 "listen": "127.0.0.1",
                 "port": 7890,
-                "protocol": "socks",
+                "protocol": "http",
                 "settings": {
                     "auth": "noauth",
                     "udp": True,
