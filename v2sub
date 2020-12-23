@@ -85,7 +85,7 @@ def openiptableRedirect():
     subprocess.call("iptables -t nat -A V2RAY -p tcp -j RETURN -m mark --mark 0xff", shell=True, stdout = subprocess.DEVNULL)
     subprocess.call("iptables -t nat -A V2RAY -p udp -j RETURN -m mark --mark 0xff", shell=True, stdout = subprocess.DEVNULL)
     try:
-        subprocess.call("iptables -t nat -A V2RAY -p tcp --match multiport ! --dports 12345,1080,22 -j REDIRECT --to-ports 12345",shell=True, stdout = subprocess.DEVNULL)
+        subprocess.call("iptables -t nat -A V2RAY -p tcp --match multiport ! --dports 12345,7890,22 -j REDIRECT --to-ports 12345",shell=True, stdout = subprocess.DEVNULL)
     except BaseException:
         print('以存在相应规则!跳过!')
     subprocess.call("iptables -t nat -A OUTPUT -p tcp -j V2RAY", shell=True, stdout = subprocess.DEVNULL)
@@ -189,7 +189,7 @@ if mode == 'changeNode':
             print('地址切换完成')
             print('代理端口协议：socks5')
             print('代理地址: 127.0.0.1')
-            print('代理端口号：1080')
+            print('代理端口号：7890')
             exit()
         elif inputStr == 'n':
             continue
@@ -205,7 +205,7 @@ else:
         subprocess.call('systemctl restart v2ray.service', shell=True)
         try:
             time.sleep(5)
-            output = subprocess.check_output('curl -o /dev/null -s -w %{speed_download} -x socks5://127.0.0.1:1080 ' + testFileUrl, shell=True)
+            output = subprocess.check_output('curl -o /dev/null -s -w %{speed_download} -x socks5://127.0.0.1:7890 ' + testFileUrl, shell=True)
         except KeyboardInterrupt:
             break
         except BaseException:
