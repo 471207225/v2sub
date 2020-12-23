@@ -32,13 +32,15 @@ class V2ray(Node):
           },
           "inbounds": [
             {
-              "port": 1080,
-              "listen": "127.0.0.1",
-              "protocol": "socks",
-              "settings": {
-                "udp": True
-              },
-              "tag": "in"
+                "listen": "127.0.0.1",
+                "port": 7890,
+                "protocol": "socks",
+                "settings": {
+                    "auth": "noauth",
+                    "udp": True,
+                    "ip": "127.0.0.1"
+                },
+                "tag": "in"
             }
           ],
           "outbounds": [
@@ -195,4 +197,3 @@ class V2ray(Node):
                     "tag": "out"
                 })
             return v2rayConf
-1
