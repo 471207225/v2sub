@@ -23,6 +23,7 @@ class V2ray(Node):
         self.camouflageTls = camouflageTls
         self.camouflageType = camouflageType
 
+    # "listen": "127.0.0.1",
     def formatConfig(self):
         v2rayConf = {
           "log" : {
@@ -32,13 +33,10 @@ class V2ray(Node):
           },
           "inbounds": [
             {
-                "listen": "127.0.0.1",
                 "port": 7890,
                 "protocol": "http",
                 "settings": {
-                    "auth": "noauth",
-                    "udp": True,
-                    "ip": "127.0.0.1"
+                    "accounts":[],
                 },
                 "tag": "in"
             }
