@@ -32,13 +32,13 @@ class V2ray(Node):
           },
           "inbounds": [
             {
-                "listen": "172.11.0.7",
+                "listen": "127.0.0.1",
                 "port": 7890,
                 "protocol": "http",
                 "settings": {
                     "auth": "noauth",
                     "udp": True,
-                    "ip": "0.0.0.0"
+                    "ip": "127.0.0.1"
                 },
                 "tag": "in"
             }
