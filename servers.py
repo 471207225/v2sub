@@ -10,7 +10,7 @@ import subprocess
 
 import requests
 
-from bak.shadowsocks import Shadowsocks
+from shadowsocks import Shadowsocks
 from confMaker import ConfMaker
 import util
 
@@ -94,6 +94,7 @@ class Switcher:
         json.dump(v2rayConf, open(self.v2rayConfigLocal, 'w'), indent=2)
 
         print(v2rayConf, serverNameMap)
+        json.dump(serverNameMap, open('./servers.json', 'w'), indent=2)
 
         print("\n重启 v2ray 服务……\n")
         subprocess.call('systemctl restart v2ray.service', shell=True)

@@ -71,7 +71,7 @@ class ConfMaker:
             v2rayConf['outbounds'].append(outBound)
             v2rayConf['routing']['settings']['rules'].append(rule)
 
-            serverNameMap[inTag] = {"out": outTag, 'name': server['remark']}
+            serverNameMap[inTag] = {"out": outTag, 'name': server['remark'], 'port': server['inPort']}
 
         return v2rayConf, serverNameMap
 
