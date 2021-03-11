@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
-from node import Node
+from bak.node import Node
 
 
 class Shadowsocks(Node):

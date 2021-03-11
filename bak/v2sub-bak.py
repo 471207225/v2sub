@@ -12,8 +12,8 @@ import subprocess
 
 import requests
 
-from shadowsocks import Shadowsocks
-from v2ray import V2ray
+from bak.shadowsocks import Shadowsocks
+from confMaker import V2ray
 
 
 def decode(base64Str):
@@ -22,6 +22,7 @@ def decode(base64Str):
     if padding != 0:
         base64Str += '=' * (4 - padding)
     return str(base64.b64decode(base64Str),  'utf-8')
+
 def askfollowRedirect(json):
     isfollowRedirect = ''
     try:
