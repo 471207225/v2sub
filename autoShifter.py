@@ -32,7 +32,7 @@ class Shifter:
             requests.get("http://backend.xxhaitun.com/output/set-proxy-port?port=" + str(first['port']))
             with open('./shift_logs.log', 'a') as f:
                 f.write(
-                    "set proxy %s:%s %s"
+                    "set proxy %s:%s %s\n"
                     % (first['name'], str(first['port']), str(first['speed']))
                 )
 

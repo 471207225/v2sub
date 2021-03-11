@@ -1,0 +1,37 @@
+{
+  "server_in_0": {
+    "out": "server_out_0",
+    "name": "\u9999\u6e2f\u4e28\u4e13\u7ebf\u4e28HKBN\u4e281x",
+    "port": 7810
+  },
+  "server_in_1": {
+    "out": "server_out_1",
+    "name": "\u9999\u6e2f\u4e28\u4e13\u7ebf\u4e28HGC\u4e281x",
+    "port": 7811
+  },
+  "server_in_2": {
+    "out": "server_out_2",
+    "name": "\u9999\u6e2f\u4e28\u4e13\u7ebf\u4e28NTT\u4e281x",
+    "port": 7812
+  },
+  "server_in_3": {
+    "out": "server_out_3",
+    "name": "\u65b0\u52a0\u5761\u4e28\u4e13\u7ebf\u4e28NTT\u4e281x",
+    "port": 7813
+  },
+  "server_in_4": {
+    "out": "server_out_4",
+    "name": "\u53f0\u6e7e\u4e28\u4e13\u7ebf\u4e28Hinet\u4e281x",
+    "port": 7814
+  },
+  "server_in_5": {
+    "out": "server_out_5",
+    "name": "\u7f8e\u56fd\u4e28\u4e13\u7ebf\u4e28Linode\u4e281x",
+    "port": 7815
+  },
+  "server_in_6": {
+    "out": "server_out_6",
+    "name": "\u65e5\u672c\u4e28\u4e13\u7ebf\u4e28NTT\u4e281x",
+    "port": 7816
+  }
+}
